@@ -1,0 +1,15 @@
+{
+    "name" : "bs-napster-api",
+    "bs-dependencies": [ "bs-superagent" ],
+    "sources" : [
+        { "dir" : "src" },
+        {
+            "dir": "test",
+            "type": "dev"
+        }
+    ],
+    "ppx-flags": [
+        "./node_modules/.bin/ppx_magic"
+    ],
+    "bsc-flags": [ "-w -10", "-bs-super-errors" ]
+}
