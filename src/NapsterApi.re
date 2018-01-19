@@ -1,14 +1,18 @@
 open Js.Result;
 open Js.Promise;
 open Superagent;
+open Option.Infix;
+open DataTypes;
 
 module type T = { let apiKey: string; };
 
 module Make = (Config: T) => {
-    let _performGet = (accessToken, path) =>
+    exception BadResponse(Js.Json.t, option(string));
+
+    let _performGet = (accessToken, path, params) => {
         get("https://api.napster.com/v2.2" ++ path)
             |> Get.setHeader(Authorization(Bearer, accessToken))
-            |> Get.query(Js.Dict.fromList([("apikey", Config.apiKey)]))
+            |> Get.query(Js.Dict.fromList(List.append([ ("apikey", Config.apiKey) ], params)))
             |> Get.end_
             |> then_((resp) =>
                 resolve(
@@ -18,33 +22,53 @@ module Make = (Config: T) => {
                     }
                 )
             );
-
-    [@autoserialize]
-    type member = {
-        id: string,
-        realName: string,
-        screenName: string,
-        bio: option(string),
-        location: option(string),
-        gender: option(string),
-        visibility: string,
-        role: string,
-        followingCount: int,
-        followerCount: int,
-        avatar: string,
-        avatarId: string,
-        defaultAvatar: string, /* "true" or "false" */
-        avatarVersion: int
     };
 
-    [@autoserialize] type me = { me: member };
+    [@autoserialize] type me = { me: Member.t };
     let me = (accessToken) =>
-        _performGet(accessToken, "/me")
+        _performGet(accessToken, "/me", [])
             |> then_((respJson) =>
                 switch (me__from_json(respJson)) {
-                    | Error(Some(key)) => Js.Exn.raiseError("Deserialization error (key: " ++ key ++ ")")
-                    | Error(_) => Js.Exn.raiseError("Deserialization error")
+                    | Error(key) => reject(BadResponse(respJson, key))
                     | Ok(v) => resolve(v)
                 }
             );
+
+    [@autoserialize]
+    type search = {
+        meta: Search.meta,
+        search: Search.body
+    };
+
+    type searchTypes =
+        | Album
+        | Artist
+        | Track
+        | Playlist
+        | Tag;
+
+    let _searchTypeString = fun
+        | Album => "album"
+        | Artist => "artist"
+        | Track => "track"
+        | Playlist => "playlist"
+        | Tag => "tag";
+
+    let search = (~types=?, accessToken, query) => {
+        let typeString = types |? [||]
+            |> Js.Array.map(_searchTypeString)
+            |> Js.Array.joinWith(",");
+
+        _performGet
+            (accessToken, "/search", [
+                ("query", query),
+                ("type", typeString)
+            ])
+            |> then_((respJson) =>
+                switch (search__from_json(respJson)) {
+                    | Error(key) => reject(BadResponse(respJson, key))
+                    | Ok(v) => resolve(v)
+                }
+            );
+    };
 };
