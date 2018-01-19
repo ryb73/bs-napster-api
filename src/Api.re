@@ -7,8 +7,6 @@ open DataTypes;
 module type T = { let apiKey: string; };
 
 module Make = (Config: T) => {
-    exception BadResponse(Js.Json.t, option(string));
-
     let _performGet = (accessToken, path, params) => {
         get("https://api.napster.com/v2.2" ++ path)
             |> Get.setHeader(Authorization(Bearer, accessToken))
@@ -41,18 +39,18 @@ module Make = (Config: T) => {
     };
 
     type searchTypes =
-        | Album
-        | Artist
-        | Track
-        | Playlist
-        | Tag;
+        | Albums
+        | Artists
+        | Tracks
+        | Playlists
+        | Tags;
 
     let _searchTypeString = fun
-        | Album => "album"
-        | Artist => "artist"
-        | Track => "track"
-        | Playlist => "playlist"
-        | Tag => "tag";
+        | Albums => "album"
+        | Artists => "artist"
+        | Tracks => "track"
+        | Playlists => "playlist"
+        | Tags => "tag";
 
     let search = (~types=?, accessToken, query) => {
         let typeString = types |? [||]

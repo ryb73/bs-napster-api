@@ -1,3 +1,5 @@
+exception BadResponse(Js.Json.t, option(string));
+
 module Member = {
     [@autoserialize]
     type t = {

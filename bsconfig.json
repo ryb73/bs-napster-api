@@ -1,12 +1,15 @@
 {
-    "name" : "bs-napster-api",
+    "name" : "napster",
+    "namespace": true,
     "bs-dependencies": [
         "bs-superagent",
         "bs-batteries",
         "bs-promise-ex"
     ],
     "sources" : [
-        { "dir" : "src" },
+        {
+            "dir" : "src"
+        },
         {
             "dir": "test",
             "type": "dev"

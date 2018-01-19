@@ -2,12 +2,12 @@ open Js.Promise;
 open PromiseEx;
 open Option.Infix;
 
-module NapsterApi = NapsterApi.Make({
+module NapsterApi = Api.Make({
     let apiKey = "N2U0MWNjYjEtMzZlMC00ZDk0LWE5NjctYmEwODljNjVjYzE3";
 });
 
 let openExn = [@bs.open] (fun
-    | NapsterApi.BadResponse(json, badKey) => (json, badKey)
+    | DataTypes.BadResponse(json, badKey) => (json, badKey)
 );
 
 let accessCode = "ZDFmOGEwYTItMDM1Ni00NmZlLWFkYWItNGZlODc5MTcyZGEw";
