@@ -185,4 +185,17 @@ module Search = {
         data: data,
         order: array(string) /* various IDs */
     };
+
+    [@autoserialize]
+    type t = {
+        meta: meta,
+        search: body
+    };
+
+    type searchTypes =
+        | Albums
+        | Artists
+        | Tracks
+        | Playlists
+        | Tags;
 };

@@ -1,8 +1,8 @@
 open Js.Result;
-open Js.Promise;
+open Bluebird;
 open Superagent;
 open Option.Infix;
-open DataTypes;
+open Types;
 
 module type T = { let apiKey: string; };
 
@@ -32,21 +32,8 @@ module Make = (Config: T) => {
                 }
             );
 
-    [@autoserialize]
-    type search = {
-        meta: Search.meta,
-        search: Search.body
-    };
-
-    type searchTypes =
-        | Albums
-        | Artists
-        | Tracks
-        | Playlists
-        | Tags;
-
     let _searchTypeString = fun
-        | Albums => "album"
+        | Search.Albums => "album"
         | Artists => "artist"
         | Tracks => "track"
         | Playlists => "playlist"
@@ -63,7 +50,7 @@ module Make = (Config: T) => {
                 ("type", typeString)
             ])
             |> then_((respJson) =>
-                switch (search__from_json(respJson)) {
+                switch (Search.t__from_json(respJson)) {
                     | Error(key) => reject(BadResponse(respJson, key))
                     | Ok(v) => resolve(v)
                 }
