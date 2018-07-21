@@ -1,7 +1,7 @@
-exception BadResponse(Js.Json.t, option(string));
+exception BadResponse(Js.Json.t, Decco.decodeError);
 
 module Member = {
-    [@autoserialize]
+    [@decco]
     type t = {
         id: string,
         realName: string,
@@ -21,7 +21,7 @@ module Member = {
 };
 
 module Tag = {
-    [@autoserialize]
+    [@decco]
     type t = {
         id: string,
         name: string,
@@ -35,25 +35,25 @@ module Tag = {
 };
 
 module AdditionalData = {
-    [@autoserialize]
+    [@decco]
     type contributingArtists = {
         primaryArtist: string /* artist ID */
     };
 };
 
 module Album = {
-    [@autoserialize]
+    [@decco]
     type discographies = {
-        main: [@autoserialize.nullable] option(array(string)), /* art IDs */
-        singlesAndEPs: [@autoserialize.nullable] option(array(string)),
+        main: option(array(string)), /* art IDs */
+        singlesAndEPs: option(array(string)),
     };
 
-    [@autoserialize]
+    [@decco]
     type t = {
         id: string,
         upc: string,
         shortcut: string,
-        amg: [@autoserialize.nullable] option(string),
+        amg: option(string),
         href: string,
         name: string,
         released: string, /* TODO: parse timestamp */
@@ -75,7 +75,7 @@ module Album = {
 
 
 module Artist = {
-    [@autoserialize]
+    [@decco]
     type bio = {
         title: string,
         author: string,
@@ -83,35 +83,35 @@ module Artist = {
         bio: string
     };
 
-    [@autoserialize]
+    [@decco]
     type albumGroups = {
-        main: [@autoserialize.nullable] option(array(string)), /* album IDs */
-        compilations: [@autoserialize.nullable] option(array(string)),
-        singlesAndEPs: [@autoserialize.nullable] option(array(string)),
-        others: [@autoserialize.nullable] option(array(string))
+        main: option(array(string)), /* album IDs */
+        compilations: option(array(string)),
+        singlesAndEPs: option(array(string)),
+        others: option(array(string))
     };
 
-    [@autoserialize]
+    [@decco]
     type t = {
         id: string,
         href: string,
         name: string,
         shortcut: string,
-        amg: [@autoserialize.nullable] option(string),
+        amg: option(string),
         blurbs: array(string),
-        bios: [@autoserialize.nullable] option(array(bio)),
+        bios: option(array(bio)),
         albumGroups: albumGroups
     };
 };
 
 module Track = {
-    [@autoserialize]
+    [@decco]
     type format = {
         bitrate: int,
         name: string
     };
 
-    [@autoserialize]
+    [@decco]
     type t = {
         id: string,
         index: int,
@@ -123,7 +123,7 @@ module Track = {
         name: string,
         isrc: string,
         shortcut: string,
-        amg: [@autoserialize.nullable] option(string),
+        amg: option(string),
         blurbs: array(string),
         artistId: string, /* artist ID */
         artistName: string,
@@ -136,19 +136,19 @@ module Track = {
 };
 
 module Playlist = {
-    [@autoserialize]
+    [@decco]
     type image = {
         id: string,
-        url: [@autoserialize.nullable] option(string),
+        url: option(string),
         contentId: string,
-        width: [@autoserialize.nullable] option(int),
-        height: [@autoserialize.nullable] option(int),
+        width: option(int),
+        height: option(int),
         isDefault: bool,
         version: int,
         imageType: string
     };
 
-    [@autoserialize]
+    [@decco]
     type t = {
         id: string,
         name: string,
@@ -164,29 +164,29 @@ module Playlist = {
 };
 
 module Search = {
-    [@autoserialize]
+    [@decco]
     type meta = {
         totalCount: int,
         returnedCount: int
     };
 
-    [@autoserialize]
+    [@decco]
     type data = {
-        albums: [@autoserialize.nullable] option(array(Album.t)),
-        artists: [@autoserialize.nullable] option(array(Artist.t)),
-        tracks: [@autoserialize.nullable] option(array(Track.t)),
-        playlists: [@autoserialize.nullable] option(array(Playlist.t)),
-        tags: [@autoserialize.nullable] option(array(Tag.t))
+        albums: option(array(Album.t)),
+        artists: option(array(Artist.t)),
+        tracks: option(array(Track.t)),
+        playlists: option(array(Playlist.t)),
+        tags: option(array(Tag.t))
     };
 
-    [@autoserialize]
+    [@decco]
     type body = {
         query: string,
         data: data,
         order: array(string) /* various IDs */
     };
 
-    [@autoserialize]
+    [@decco]
     type t = {
         meta: meta,
         search: body

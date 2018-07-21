@@ -22,7 +22,7 @@ module Make = (Config: T) => {
             );
     };
 
-    [@autoserialize] type me = { me: Member.t };
+    [@decco] type me = { me: Member.t };
     let me = (accessToken) =>
         _performGet(accessToken, "/me", [])
             |> then_((respJson) =>
