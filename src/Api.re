@@ -1,4 +1,4 @@
-open Js.Result;
+open Belt.Result;
 open Bluebird;
 open Superagent;
 open Option.Infix;
@@ -26,7 +26,7 @@ module Make = (Config: T) => {
     let me = (accessToken) =>
         _performGet(accessToken, "/me", [])
             |> then_((respJson) =>
-                switch (me__from_json(respJson)) {
+                switch (me_decode(respJson)) {
                     | Error(key) => reject(BadResponse(respJson, key))
                     | Ok(v) => resolve(v)
                 }
@@ -50,7 +50,7 @@ module Make = (Config: T) => {
                 ("type", typeString)
             ])
             |> then_((respJson) =>
-                switch (Search.t__from_json(respJson)) {
+                switch (Search.t_decode(respJson)) {
                     | Error(key) => reject(BadResponse(respJson, key))
                     | Ok(v) => resolve(v)
                 }

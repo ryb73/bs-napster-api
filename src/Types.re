@@ -16,7 +16,7 @@ module Member = {
         avatar: string,
         avatarId: string,
         defaultAvatar: string, /* "true" or "false" */
-        avatarVersion: int
+        avatarVersion: [@decco.codec Decco.int64Unsafe] int64
     };
 };
 
