@@ -1,5 +1,5 @@
 open Belt.Result;
-open Bluebird;
+open Reduice.Promise;
 open Superagent;
 open Option.Infix;
 open Types;
@@ -9,16 +9,15 @@ module type T = { let apiKey: string; };
 module Make = (Config: T) => {
     let _performGet = (accessToken, path, params) => {
         get("https://api.napster.com/v2.2" ++ path)
-            |> Get.setHeader(Authorization(Bearer, accessToken))
-            |> Get.query(Js.Dict.fromList(List.append([ ("apikey", Config.apiKey) ], params)))
-            |> Get.end_
-            |> then_((resp) =>
-                resolve(
-                    switch (resp.body) {
-                        | None => Js.Exn.raiseError("No response body")
-                        | Some(body) => body
-                    }
-                )
+            |> setHeader(Authorization(Bearer, accessToken))
+            |> queryMultiple(Js.Dict.fromList(params))
+            |> query("apikey", Config.apiKey)
+            |> end_
+            |> PromiseEx.map((resp) =>
+                switch (resp.body) {
+                    | None => Js.Exn.raiseError("No response body")
+                    | Some(body) => body
+                }
             );
     };
 

@@ -6,7 +6,8 @@
         "bs-batteries",
         "bs-promise-ex",
         "bs-bluebird",
-        "decco"
+        "decco",
+        "reduice"
     ],
     "sources" : [
         {

@@ -1,8 +1,6 @@
-open Bluebird;
+open Reduice.Promise;
 open Option.Infix;
-
-module BluebirdEx = PromiseEx.Make(Bluebird);
-open BluebirdEx;
+open PromiseEx;
 
 module NapsterApi = Api.Make({
     let apiKey = "N2U0MWNjYjEtMzZlMC00ZDk0LWE5NjctYmEwODljNjVjYzE3";
