@@ -121,7 +121,7 @@ module Track = {
         isExplicit: bool,
         isStreamable: bool,
         name: string,
-        isrc: string,
+        isrc: option(string),
         shortcut: string,
         amg: option(string),
         blurbs: array(string),
