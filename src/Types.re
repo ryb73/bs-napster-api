@@ -51,7 +51,7 @@ module Album = {
     [@decco]
     type t = {
         id: string,
-        upc: string,
+        upc: option(string),
         shortcut: string,
         amg: option(string),
         href: string,
