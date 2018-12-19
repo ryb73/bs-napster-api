@@ -1,28 +1,34 @@
 {
   "name": "bs-napster-api",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "BuckleScript client for Napster's REST API",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && bsb -make-world",
-    "watch": "npm run clean && bsb -make-world -w",
-    "clean": "rm -rf lib && bsb -clean-world"
-  },
   "keywords": [
     "bucklescript",
+    "napster",
     "reason",
-    "reasonml",
-    "napster"
+    "reasonml"
   ],
-  "license": "MIT",
-  "author": "Ryan Biwer",
-  "_": [],
   "repository": {
     "type": "git",
     "url": "git@github.com:ryb73/bs-napster-api.git"
   },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && bsb -make-world",
+    "clean": "rm -rf lib && bsb -clean-world",
+    "postinstall": "[ ! -f package-links.json ] || ppl link-file",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm run clean && bsb -make-world -w"
+  },
   "peerDependencies": {
-    "bs-platform": "^3.1.5"
-  }
+    "bs-batteries": "0.0.14",
+    "bs-bluebird": "0.0.1",
+    "bs-platform": "^4.0.0",
+    "bs-promise-ex": "0.0.1",
+    "bs-superagent": "0.0.1",
+    "decco": "0.0.1",
+    "reduice": "0.0.1"
+  },
+  "_": []
 }
