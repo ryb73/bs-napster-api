@@ -1,4 +1,6 @@
-exception BadResponse(Js.Json.t, Decco.decodeError);
+open Decco;
+
+exception BadResponse(Js.Json.t, decodeError);
 
 module Member = {
     [@decco]
@@ -16,7 +18,7 @@ module Member = {
         avatar: string,
         avatarId: string,
         defaultAvatar: string, /* "true" or "false" */
-        avatarVersion: [@decco.codec Decco.int64Unsafe] int64
+        avatarVersion: [@decco.codec Codecs.int64Unsafe] int64
     };
 };
 
@@ -69,7 +71,7 @@ module Album = {
         accountPartner: string,
         artistName: string,
         contributingArtists: AdditionalData.contributingArtists,
-        discographies: discographies
+        discographies: option(discographies)
     };
 };
 
