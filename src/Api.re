@@ -1,8 +1,8 @@
 open Belt.Result;
 open Reduice.Promise;
 open Superagent;
-open Option.Infix;
-open Types;
+open NapsterTypes;
+open OptEx.Operators;
 
 module type T = { let apiKey: string; };
 
@@ -13,7 +13,7 @@ module Make = (Config: T) => {
             |> queryMultiple(Js.Dict.fromList(params))
             |> query("apikey", Config.apiKey)
             |> end_
-            |> PromiseEx.map((resp) =>
+            |> PromEx.map((resp) =>
                 switch (resp.body) {
                     | None => Js.Exn.raiseError("No response body")
                     | Some(body) => body

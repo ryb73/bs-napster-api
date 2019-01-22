@@ -1,6 +1,7 @@
+open NapsterApi;
 open Reduice.Promise;
-open Option.Infix;
-open PromiseEx;
+open PromEx;
+open OptEx.Operators;
 
 module NapsterApi = Api.Make({
     let apiKey = "N2U0MWNjYjEtMzZlMC00ZDk0LWE5NjctYmEwODljNjVjYzE3";

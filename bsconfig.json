@@ -1,17 +1,17 @@
 {
-    "name" : "bs-napster-api",
-    "namespace": true,
+    "name": "@ryb73/bs-napster-api",
     "bs-dependencies": [
-        "bs-superagent",
-        "bs-batteries",
-        "bs-promise-ex",
-        "bs-bluebird",
-        "decco",
-        "reduice"
+        "@ryb73/bs-superagent",
+        "@ryb73/bs-bluebird",
+        "@ryb73/decco",
+        "@ryb73/opt-ex",
+        "@ryb73/prom-ex",
+        "@ryb73/reduice"
     ],
-    "sources" : [
+    "sources": [
         {
-            "dir" : "src"
+            "dir": "src",
+            "public": ["NapsterApi"],
         },
         {
             "dir": "test",
