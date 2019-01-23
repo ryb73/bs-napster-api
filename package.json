@@ -33,8 +33,8 @@
     "@ryb73/bs-superagent": "0.0.2",
     "@ryb73/decco": "0.0.5",
     "@ryb73/opt-ex": "^0.0.1",
-    "@ryb73/prom-ex": "0.0.3",
-    "@ryb73/reduice": "0.0.4"
+    "@ryb73/prom-ex": "0.0.4",
+    "@ryb73/reduice": "0.0.5"
   },
   "_": []
 }
