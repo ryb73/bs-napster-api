@@ -9,16 +9,16 @@
   dependencies:
     bluebird "^3.5.1"
 
-"@ryb73/bs-superagent@0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.0.2.tgz#00e5f5a4b8e46c188aa69a8b4b6e81fbb2d68086"
-  integrity sha512-41Bko05rJRu45j1zviEHtpSoreYXyTdPHEhnIIxq0bIMPY8ju0ORgAIhGZKt1Kf9VLOOJBKTEzhAqsQk5mxl1g==
+"@ryb73/bs-superagent@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.0.3.tgz#66aea2228fab35c3a9bde7125df6f61d117fbefe"
+  integrity sha512-I3Y7vo+n/wequH4qYaCyWRoRW4W5/qwM53Shv5tbR9LR+EFIVH29kcbq4JAnaAhW71OwOHeiW+ZIdbzRdZw7Dw==
   dependencies:
     "@ryb73/bs-bluebird" "0.0.2"
     "@ryb73/decco" "0.0.5"
     "@ryb73/opt-ex" "^0.0.1"
-    "@ryb73/prom-ex" "0.0.3"
-    "@ryb73/reduice" "0.0.4"
+    "@ryb73/prom-ex" "0.0.4"
+    "@ryb73/reduice" "0.0.5"
     superagent "^4.0.0"
 
 "@ryb73/decco@0.0.5":
@@ -31,26 +31,12 @@
   resolved "https://registry.yarnpkg.com/@ryb73/opt-ex/-/opt-ex-0.0.1.tgz#3413304d429d68cedec6491af3d487db28e83266"
   integrity sha512-Rp0OSuQPNvrgMo5FuHBsO9iRwc846Ivso966AwFdDT7lcB/3e7Fyb2JxpufO+UpPvEUc1t2039C3QljprvfnzA==
 
-"@ryb73/prom-ex@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@ryb73/prom-ex/-/prom-ex-0.0.3.tgz#a6d968da7579b8667fc05ab536bc73ab5464045f"
-  integrity sha512-5HnhbFwW1rt/TrjpglP/o4NwVYh4KNtiu1NDsW8gSqnoMkuBicwWK2DnZX+ebB2qKIj9Qm08T4Qpbl2Wl6x67w==
-  dependencies:
-    "@ryb73/reduice" "0.0.4"
-
 "@ryb73/prom-ex@0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@ryb73/prom-ex/-/prom-ex-0.0.4.tgz#7588b3375ae80bb508ece55cd2dd4ea65009680d"
   integrity sha512-6CCQ4HmYLXW/81TQiLXkdm9U8LMjxaYwWAfzHPivFOhSh3ZBZ77g8/uoZSZReWi/1Qo/sbHOZfSGbCpWp4DlwQ==
   dependencies:
     "@ryb73/reduice" "0.0.5"
-
-"@ryb73/reduice@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@ryb73/reduice/-/reduice-0.0.4.tgz#6844a95ac91e01117fe4cbe5fda6e680936e3c16"
-  integrity sha512-P4lTUlQENBKAqX1Fig9u2h625SG7i2LskA9AnPkJR9/dqXG6AXNa4sVGUkJ7i3tMqzxOqWv3emoqKd5LgrCXig==
-  dependencies:
-    "@ryb73/bs-bluebird" "0.0.2"
 
 "@ryb73/reduice@0.0.5":
   version "0.0.5"
