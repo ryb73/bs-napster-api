@@ -1,14 +1,14 @@
-open NapsterApi;
 open Reduice.Promise;
 open PromEx;
 open OptEx.Operators;
+open NapsterApi;
 
-module NapsterApi = Api.Make({
+module NapsterApi = NapsterApi.Make({
     let apiKey = "N2U0MWNjYjEtMzZlMC00ZDk0LWE5NjctYmEwODljNjVjYzE3";
 });
 
 let openExn = [@bs.open] (fun
-    | Types.BadResponse(json, badKey) => (json, badKey)
+    | NapsterTypes.BadResponse(json, badKey) => (json, badKey)
 );
 
 let accessCode = "ZDFmOGEwYTItMDM1Ni00NmZlLWFkYWItNGZlODc5MTcyZGEw";
@@ -22,20 +22,22 @@ let accessCode = "ZDFmOGEwYTItMDM1Ni00NmZlLWFkYWItNGZlODc5MTcyZGEw";
 
 NapsterApi.search(accessCode, "disintegration")
     |> map((result) => {
-        result.Types.Search.search.data.artists |? [||]
-            |> Js.Array.map(({ Types.Artist.id, name }) => Js.log3(id,":",name))
+        open Search;
+
+        result.search.data.artists |? [||]
+            |> Js.Array.map(({ Artist.id, name }) => Js.log3(id,":",name))
             |> ignore;
 
-        result.Types.Search.search.data.albums |? [||]
-            |> Js.Array.map(({ Types.Album.id, name }) => Js.log3(id,":",name))
+        result.search.data.albums |? [||]
+            |> Js.Array.map(({ Album.id, name }) => Js.log3(id,":",name))
             |> ignore;
 
-        result.Types.Search.search.data.tracks |? [||]
-            |> Js.Array.map(({ Types.Track.id, name }) => Js.log3(id,":",name))
+        result.search.data.tracks |? [||]
+            |> Js.Array.map(({ Track.id, name }) => Js.log3(id,":",name))
             |> ignore;
 
-        result.Types.Search.search.data.playlists |? [||]
-            |> Js.Array.map(({ Types.Playlist.id, name }) => Js.log3(id,":",name))
+        result.search.data.playlists |? [||]
+            |> Js.Array.map(({ Playlist.id, name }) => Js.log3(id,":",name))
             |> ignore;
     })
     |> catch((exn) => {
