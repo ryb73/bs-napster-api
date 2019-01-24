@@ -45,6 +45,13 @@
   dependencies:
     "@ryb73/bs-bluebird" "0.0.2"
 
+"@ryb73/reduice@0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@ryb73/reduice/-/reduice-0.0.6.tgz#ac5302e8429b23addb9560b3bae51d5d64a347c0"
+  integrity sha512-wLIp5sZNdHkgyGYizhYkphCSba7SfJc6nRGcIex2wJaQwDK2eRjZFkm/3cTOqZtD/+1zMAC2o2c3Sa8GpZV5Xg==
+  dependencies:
+    "@ryb73/bs-bluebird" "0.0.2"
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
