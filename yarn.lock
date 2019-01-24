@@ -9,16 +9,16 @@
   dependencies:
     bluebird "^3.5.1"
 
-"@ryb73/bs-superagent@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.0.3.tgz#66aea2228fab35c3a9bde7125df6f61d117fbefe"
-  integrity sha512-I3Y7vo+n/wequH4qYaCyWRoRW4W5/qwM53Shv5tbR9LR+EFIVH29kcbq4JAnaAhW71OwOHeiW+ZIdbzRdZw7Dw==
+"@ryb73/bs-superagent@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.0.4.tgz#b0f6de7834de895cb62cb6feb15fa45642948c81"
+  integrity sha512-fQw3p6n3UW0ag8J8CKwrarVqvoFJ7YtRJIp8Ku6MqHd5U1ej5ixbOubHIzimvvxo6OxRhOXZwXWzNsymPv6bMg==
   dependencies:
     "@ryb73/bs-bluebird" "0.0.2"
     "@ryb73/decco" "0.0.5"
     "@ryb73/opt-ex" "^0.0.1"
-    "@ryb73/prom-ex" "0.0.4"
-    "@ryb73/reduice" "0.0.5"
+    "@ryb73/prom-ex" "0.0.5"
+    "@ryb73/reduice" "0.0.6"
     superagent "^4.0.0"
 
 "@ryb73/decco@0.0.5":
@@ -31,19 +31,12 @@
   resolved "https://registry.yarnpkg.com/@ryb73/opt-ex/-/opt-ex-0.0.1.tgz#3413304d429d68cedec6491af3d487db28e83266"
   integrity sha512-Rp0OSuQPNvrgMo5FuHBsO9iRwc846Ivso966AwFdDT7lcB/3e7Fyb2JxpufO+UpPvEUc1t2039C3QljprvfnzA==
 
-"@ryb73/prom-ex@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@ryb73/prom-ex/-/prom-ex-0.0.4.tgz#7588b3375ae80bb508ece55cd2dd4ea65009680d"
-  integrity sha512-6CCQ4HmYLXW/81TQiLXkdm9U8LMjxaYwWAfzHPivFOhSh3ZBZ77g8/uoZSZReWi/1Qo/sbHOZfSGbCpWp4DlwQ==
-  dependencies:
-    "@ryb73/reduice" "0.0.5"
-
-"@ryb73/reduice@0.0.5":
+"@ryb73/prom-ex@0.0.5":
   version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@ryb73/reduice/-/reduice-0.0.5.tgz#53286d64c7286de1f4124734d051fd091b2246de"
-  integrity sha512-SFuGIgIDwspJbvQ5up1We3JA9JP+6pk6MQcEicu4Kj3ZS3ilybacIJr7IQKCtMaMDpFuhmgdtiVK3wslPpT4Qg==
+  resolved "https://registry.yarnpkg.com/@ryb73/prom-ex/-/prom-ex-0.0.5.tgz#98d765afaccf01409f31e47636bd107c2a684b95"
+  integrity sha512-4yURKI8sVp/4jsz1D2Oz5HVbSXW9YqUeQn5b5Igd2a4UvX9zGLh+wFg4jVjsNShaS0XljgM7NvobrkBrA5+T8Q==
   dependencies:
-    "@ryb73/bs-bluebird" "0.0.2"
+    "@ryb73/reduice" "0.0.6"
 
 "@ryb73/reduice@0.0.6":
   version "0.0.6"
