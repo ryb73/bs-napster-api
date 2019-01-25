@@ -9,14 +9,14 @@
   dependencies:
     bluebird "^3.5.1"
 
-"@ryb73/bs-superagent@0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.0.6.tgz#5060b668cf5d40c63e80d5cd94c8b7a266471ec3"
-  integrity sha512-J35DJo8UYlqbhhm8r9YEKwszourmo33ZuwOebIEGWWP8O+VUglM0wzTdIlZpUBUpMoy1QF/uLJO2D3HhC11uuA==
+"@ryb73/bs-superagent@0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.0.7.tgz#e80c039988701e2a2a8aa1680b2222d623df3745"
+  integrity sha512-/5y4WzCr7ElVSPCN6FKRhfiguF8/l/nmCKf9tcmfG9aDfmD9xajRb/rz17KHTBWstus3A+/WfXgAbAtr+q5DLQ==
   dependencies:
     "@ryb73/bs-bluebird" "0.0.3"
     "@ryb73/decco" "0.0.6"
-    "@ryb73/opt-ex" "^0.0.4"
+    "@ryb73/opt-ex" "^0.0.5"
     "@ryb73/prom-ex" "0.0.7"
     "@ryb73/reduice" "0.0.8"
     superagent "^4.0.0"
@@ -25,11 +25,6 @@
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/@ryb73/decco/-/decco-0.0.6.tgz#fd772298afc2593e9e2b6cb5ff011e1b912028bb"
   integrity sha512-NPgBWIrXz5GdRDgqZDGFVSYxsIrBssY/iZnJGHiPqXdQqKL5q9nbpJHW9G8wApt98BHyxZZTo45vGGiXiUwu7Q==
-
-"@ryb73/opt-ex@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@ryb73/opt-ex/-/opt-ex-0.0.4.tgz#a5a059c341039a71302379f7d0c6a42c86e7e95a"
-  integrity sha512-7df4OFf8tsplE3Is5ncqrUO6IUItn8dEeVClqJlGB2Tb45di94hCLlOsspiZYW8q4YACDaoBwCnH+yj/QUlcTg==
 
 "@ryb73/opt-ex@^0.0.5":
   version "0.0.5"
