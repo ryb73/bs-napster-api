@@ -6,7 +6,6 @@
         "@ryb73/decco",
         "@ryb73/opt-ex",
         "@ryb73/prom-ex",
-        "@ryb73/reduice"
     ],
     "sources": [
         {

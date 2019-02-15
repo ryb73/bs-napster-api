@@ -1,4 +1,4 @@
-open Reduice.Promise;
+open Js.Promise;
 open PromEx;
 open OptEx.Operators;
 open NapsterApi;

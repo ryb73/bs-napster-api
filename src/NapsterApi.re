@@ -1,5 +1,5 @@
 open Belt.Result;
-open Reduice.Promise;
+open Js.Promise;
 open Superagent;
 open NapsterTypes;
 open OptEx.Operators;

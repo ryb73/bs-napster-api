@@ -169,8 +169,8 @@ module Search: {
 module type Config = { let apiKey: string; };
 module Make: (Config : Config) => {
     [@decco] type me = { me: Member.t, };
-    let me: string => Reduice.Promise.t(me);
+    let me: string => Js.Promise.t(me);
     let search:
         (~types: Js.Array.t(Search.searchTypes)=?,
-        string, string) => Reduice.Promise.t(Search.t);
+        string, string) => Js.Promise.t(Search.t);
 };
