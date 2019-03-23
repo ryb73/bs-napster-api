@@ -13,12 +13,12 @@ let openExn = [@bs.open] (fun
 
 let accessCode = "ZDFmOGEwYTItMDM1Ni00NmZlLWFkYWItNGZlODc5MTcyZGEw";
 
-/* NapsterApi.me(accessCode)
+NapsterApi.me(accessCode)
     |> map(Js.log2("me"))
     |> catch((exn) => {
         Js.log2("me error", exn);
         resolve ();
-    }); */
+    });
 
 NapsterApi.search(accessCode, "disintegration")
     |> map((result) => {
@@ -44,7 +44,6 @@ NapsterApi.search(accessCode, "disintegration")
         switch (openExn(exn)) {
             | None => Js.log2("unknown error", exn)
             | Some((json, badKey)) => {
-                /* [%bs.raw "console.log(JSON.stringify(match[0][0].search.data.playlists[2].images, null, 2))"]; */
                 Js.log3("Bad response", json, badKey);
             }
         };
