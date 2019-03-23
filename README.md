@@ -12,4 +12,5 @@ npm i @ryb73/bs-napster-api
 ```
 
 ## How do I use it?
-See [test/test.re](test/test.re) for examples.
+* See [test/test.re] for examples.
+* See https://developer.napster.com/api for Napster API docs
