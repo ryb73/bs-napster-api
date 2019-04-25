@@ -2,7 +2,6 @@
     "name": "@ryb73/bs-napster-api",
     "bs-dependencies": [
         "@ryb73/bs-superagent",
-        "@ryb73/bs-bluebird",
         "@ryb73/decco",
         "@ryb73/opt-ex",
         "@ryb73/prom-ex",
