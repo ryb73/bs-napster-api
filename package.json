@@ -1,6 +1,6 @@
 {
   "name": "@ryb73/bs-napster-api",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "BuckleScript client for Napster's REST API",
   "files": [
     "/bsconfig.json",
