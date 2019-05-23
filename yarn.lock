@@ -2,19 +2,14 @@
 # yarn lockfile v1
 
 
-"@ryb73/bs-superagent@0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.0.12.tgz#94348b20532820de4f4eac2b5e55f8cb8aaf56d1"
-  integrity sha512-BX9c+r6FHUaiQDI6Z51VgPKUp/QEcuHDJUvo9cuSeZuBsrMsjJxUpMi5hc0FzuIPY1jAozod42zo9Cb8ppYvoA==
+"@ryb73/bs-superagent@0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.0.13.tgz#74f36525e3e8db0aed2c9dcd455bfa05bc0b748a"
+  integrity sha512-mj1NhHjBCKJzCK/VrJoYD0iAT2785hxfx3bH2Ic3kl6jTn6DD5L7xzTQBx9gxDsQsXD6rFbnz7ASu2rj5WIFCw==
   dependencies:
-    "@ryb73/decco" "0.0.13"
+    "@ryb73/decco" "0.0.14"
     "@ryb73/opt-ex" "0.0.8"
     superagent "^5.0.5"
-
-"@ryb73/decco@0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@ryb73/decco/-/decco-0.0.13.tgz#731dbc02a2a629dfbe564f850856f3073c7ad72a"
-  integrity sha512-Zww2vqit8mfHLfnR6i1jUl0FIAAVw6pYciPO++EkH66rjYpCJebABn1MLrRmS8sWHjceTfSxwg8WQImuRa7A8w==
 
 "@ryb73/decco@0.0.14":
   version "0.0.14"
