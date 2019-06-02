@@ -18,27 +18,27 @@ module type Config = { let apiKey: string; };
 module Make = (Config: Config) => {
     let _performGet = (accessToken, path, params) => {
         get("https://api.napster.com/v2.2" ++ path)
-            |> setHeader(Authorization(Bearer, accessToken))
-            |> queryMultiple(Js.Dict.fromList(params))
-            |> query("apikey", Config.apiKey)
-            |> end_
-            |> PromEx.map((resp) =>
-                switch (resp.body) {
-                    | None => Js.Exn.raiseError("No response body")
-                    | Some(body) => body
-                }
-            );
+        |> setHeader(Authorization(Bearer, accessToken))
+        |> queryMultiple(Js.Dict.fromList(params))
+        |> query("apikey", Config.apiKey)
+        |> end_
+        |> PromEx.map((resp) =>
+            switch (resp.body) {
+                | None => Js.Exn.raiseError("No response body")
+                | Some(body) => body
+            }
+        );
     };
 
     [@decco] type me = { me: Member.t };
     let me = (accessToken) =>
         _performGet(accessToken, "/me", [])
-            |> then_((respJson) =>
-                switch (me_decode(respJson)) {
-                    | Error(key) => reject(BadResponse(respJson, key))
-                    | Ok(v) => resolve(v)
-                }
-            );
+        |> then_((respJson) =>
+            switch (me_decode(respJson)) {
+                | Error(key) => reject(BadResponse(respJson, key))
+                | Ok(v) => resolve(v)
+            }
+        );
 
     let _searchTypeString = fun
         | Search.Albums => "album"
@@ -49,19 +49,18 @@ module Make = (Config: Config) => {
 
     let search = (~types=?, accessToken, query) => {
         let typeString = types |? [||]
-            |> Js.Array.map(_searchTypeString)
-            |> Js.Array.joinWith(",");
+        |> Js.Array.map(_searchTypeString)
+        |> Js.Array.joinWith(",");
 
-        _performGet
-            (accessToken, "/search", [
-                ("query", query),
-                ("type", typeString)
-            ])
-            |> then_((respJson) =>
-                switch (Search.t_decode(respJson)) {
-                    | Error(key) => reject(BadResponse(respJson, key))
-                    | Ok(v) => resolve(v)
-                }
-            );
+        _performGet(accessToken, "/search", [
+            ("query", query),
+            ("type", typeString)
+        ])
+        |> then_((respJson) =>
+            switch (Search.t_decode(respJson)) {
+                | Error(key) => reject(BadResponse(respJson, key))
+                | Ok(v) => resolve(v)
+            }
+        );
     };
 };
