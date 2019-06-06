@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ryb73/bs-superagent@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.2.1.tgz#71a9ab45460a8d484e60b8db55d3fb442f41595e"
-  integrity sha512-LR8q5/RO4LvhvnFFyQAM+9OQ8+r3fbHyQkwUA1ffJ8FgutgY7sVIhOOYg4RrGt0AiPpU9UZyMzyNcDeK7RnE7Q==
+"@ryb73/bs-superagent@0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.2.2.tgz#4c8de82f8f27f12f1953f2b36db0ac096240b84b"
+  integrity sha512-fo/khMiEHLMCJO90PdTU3Uq+nziYW6bPQo9KYU5FKioAXOK/7UIHHV8mpK3vEkCd+BgUOBxcbhSsqH1aFaLSIQ==
   dependencies:
     "@ryb73/decco" "0.0.14"
     "@ryb73/opt-ex" "0.1.0"
@@ -21,10 +21,10 @@
   resolved "https://registry.yarnpkg.com/@ryb73/opt-ex/-/opt-ex-0.1.0.tgz#7426f4822ab5cf9e843f7fc20e8e6f090c54bc46"
   integrity sha512-EA/Aee/2Enh86Wa1NHZQ1iGswfHHlMK4gYVT05kxlx/CoO9dvKqCYcwYErtLSPtfOJoiPj/JNhb4nDGKellrEw==
 
-"@ryb73/prom-ex@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ryb73/prom-ex/-/prom-ex-0.1.0.tgz#7107d20e7d7addf9d8dab824d407896d08a9ed4a"
-  integrity sha512-Ij7eP0ThK2hOaJK6tRylEHkVVvt7/VtdIP/sqoqw4qTR+PLWQS4lMJlE3aKIbnmYq7VsnEuHYF2UNzJNHZf9jg==
+"@ryb73/prom-ex@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@ryb73/prom-ex/-/prom-ex-0.2.0.tgz#4989a8622323fa4c8080aed47eb8c3e64775707e"
+  integrity sha512-G7xb6ZK/+LPmgfmo0olJ0bOaze+40hhJpEMhKqABUIhcgGHEtPKolTGOmxbkkevOlrPuyajoTWBykTQzEXbMRw==
 
 asynckit@^0.4.0:
   version "0.4.0"
