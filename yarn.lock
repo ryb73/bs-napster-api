@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@ryb73/bs-superagent@0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.2.2.tgz#4c8de82f8f27f12f1953f2b36db0ac096240b84b"
-  integrity sha512-fo/khMiEHLMCJO90PdTU3Uq+nziYW6bPQo9KYU5FKioAXOK/7UIHHV8mpK3vEkCd+BgUOBxcbhSsqH1aFaLSIQ==
+"@ryb73/bs-superagent@0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.2.3.tgz#22ad272212064199404b8713c21d2801356c74b5"
+  integrity sha512-MH2wLLD80EEVxFs6mh3VyetXSY4XtZeA7DHzR2QvYNPY78OppDDrsTprT4rsTBbndv73lscKwlDVheSxCP8Cog==
   dependencies:
-    "@ryb73/decco" "0.0.14"
-    "@ryb73/opt-ex" "0.1.0"
-    superagent "^5.0.6"
+    "@ryb73/decco" "0.1.0"
+    "@ryb73/opt-ex" "0.2.0"
+    superagent "^5.1.0"
 
-"@ryb73/decco@0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@ryb73/decco/-/decco-0.0.14.tgz#68814f6eaff42edac993306a60b9142446930acc"
-  integrity sha512-RPxV0rlGa3gK6yoXVnsRW9A5xjN2ng7VuI1DHc79sMGJP4foWAuuyDxb1gSAa2iJLos85vpgDP7gV8CmCC8nQQ==
-
-"@ryb73/opt-ex@0.1.0", "@ryb73/opt-ex@^0.1.0":
+"@ryb73/decco@0.1.0":
   version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ryb73/opt-ex/-/opt-ex-0.1.0.tgz#7426f4822ab5cf9e843f7fc20e8e6f090c54bc46"
-  integrity sha512-EA/Aee/2Enh86Wa1NHZQ1iGswfHHlMK4gYVT05kxlx/CoO9dvKqCYcwYErtLSPtfOJoiPj/JNhb4nDGKellrEw==
+  resolved "https://registry.yarnpkg.com/@ryb73/decco/-/decco-0.1.0.tgz#c39e03377bebe975864bb9c2e05fe3aeb1cd090d"
+  integrity sha512-raSP6kWVYYMHWgBK9ZsjbWsuziglDC+RxQ4G5EaHDcVpDunqxqk3/pdcgpLMdAAAAVQDHBKdOCu9lrZE5y0tDg==
+
+"@ryb73/opt-ex@0.2.0", "@ryb73/opt-ex@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@ryb73/opt-ex/-/opt-ex-0.2.0.tgz#aab6e4abeb866c0ce55e560ea940e61e9fa79c8f"
+  integrity sha512-YNXe9s/lOAQr8YxvKtKjw/W5h6KO8rEHq8K6xRFXt837nw1O0zhQ8lklBG/u9eCqljl0NugAZlK/v8xs3vCYZQ==
 
 "@ryb73/prom-ex@0.2.0":
   version "0.2.0"
@@ -30,6 +30,11 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
+
+bs-platform@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.0.6.tgz#88c13041fb020479800de3d82c680bf971091425"
+  integrity sha512-6Boa2VEcWJp2WJr38L7bp3J929nYha7gDarjxb070jWzgfPJ/WbzjipmSfnu2eqqk1MfjEIpBipbPz6n1NISwA==
 
 combined-stream@^1.0.6:
   version "1.0.7"
@@ -59,6 +64,11 @@ delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
+
+fast-safe-stringify@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.6.tgz#04b26106cc56681f51a044cfc0d76cf0008ac2c2"
+  integrity sha512-q8BZ89jjc+mz08rSxROs8VsrBBcn1SIw1kq9NjolL509tkABRk9io01RAjSaEv1Xb2uFLt8VtRiZbGp5H8iDtg==
 
 form-data@^2.3.3:
   version "2.3.3"
@@ -96,10 +106,10 @@ mime-types@^2.1.12:
   dependencies:
     mime-db "~1.37.0"
 
-mime@^2.4.3:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.3.tgz#229687331e86f68924e6cb59e1cdd937f18275fe"
-  integrity sha512-QgrPRJfE+riq5TPZMcHZOtm8c6K/yYrMbKIoRfapfiGLxS8OTeIfRhUGW5LU7MlRa52KOAGCfUNruqLrIBvWZw==
+mime@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.4.tgz#bd7b91135fc6b01cde3e9bae33d659b63d8857e5"
+  integrity sha512-LRxmNwziLPT828z+4YkNzloCFC2YM4wrB99k+AV5ZbEyfGNWfG8SO1FUXLmLDBSo89NrJZ4DIWeLjy1CHGhMGA==
 
 ms@^2.1.1:
   version "2.1.1"
@@ -137,18 +147,19 @@ string_decoder@^1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-superagent@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/superagent/-/superagent-5.0.6.tgz#78cb26a2742cfadc7aa422c329f23bbd61f08121"
-  integrity sha512-Rs1F18i4/o3C5N1kKAjWRS+uwQma3zz8J+hduC3E6CCE9LMF44ZPInBuvAibpgDoTtj42nkRNuasQ2r2JeMMIw==
+superagent@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/superagent/-/superagent-5.1.0.tgz#9ce4f38bee64d65a56166423b573222fa1b8f041"
+  integrity sha512-7V6JVx5N+eTL1MMqRBX0v0bG04UjrjAvvZJTF/VDH/SH2GjSLqlrcYepFlpTrXpm37aSY6h3GGVWGxXl/98TKA==
   dependencies:
     component-emitter "^1.3.0"
     cookiejar "^2.1.2"
     debug "^4.1.1"
+    fast-safe-stringify "^2.0.6"
     form-data "^2.3.3"
     formidable "^1.2.1"
     methods "^1.1.2"
-    mime "^2.4.3"
+    mime "^2.4.4"
     qs "^6.7.0"
     readable-stream "^3.4.0"
     semver "^6.1.1"
