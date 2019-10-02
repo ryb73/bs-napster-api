@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ryb73/bs-superagent@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.2.3.tgz#22ad272212064199404b8713c21d2801356c74b5"
-  integrity sha512-MH2wLLD80EEVxFs6mh3VyetXSY4XtZeA7DHzR2QvYNPY78OppDDrsTprT4rsTBbndv73lscKwlDVheSxCP8Cog==
+"@ryb73/bs-superagent@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@ryb73/bs-superagent/-/bs-superagent-0.3.0.tgz#b71a4a1c3f4698db91762339cbc436e87d8cae38"
+  integrity sha512-HLc7SyKbx6K/InI7PDpj8YB5bYRznKUcNC8KVip+bBionnK+egh/PPVXxLYbjpBmkZXX6EwLObP4iqPRDhJfig==
   dependencies:
     "@ryb73/decco" "0.1.0"
     "@ryb73/opt-ex" "0.2.0"
