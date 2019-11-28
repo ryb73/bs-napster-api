@@ -2,9 +2,9 @@
     "name": "@ryb73/bs-napster-api",
     "bs-dependencies": [
         "@ryb73/bs-superagent",
-        "@ryb73/decco",
         "@ryb73/opt-ex",
         "@ryb73/prom-ex",
+        "decco",
     ],
     "sources": [
         {
@@ -16,7 +16,10 @@
             "type": "dev"
         }
     ],
-    "ppx-flags": [ "ppx_decco" ],
+    "ppx-flags": [ "decco/ppx" ],
     "refmt": 3,
-    "bsc-flags": [ "-w -10", "-bs-super-errors" ]
+    "warnings": {
+        "number": "+A-4-9-40-41-42"
+    },
+    "bsc-flags": [ "-bs-super-errors" ]
 }
