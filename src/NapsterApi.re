@@ -1,4 +1,3 @@
-open Belt.Result;
 open Js.Promise;
 open Superagent;
 open NapsterTypes;
@@ -35,7 +34,7 @@ module Make = (Config: Config) => {
         _performGet(accessToken, "/me", [])
         |> then_((respJson) =>
             switch (me_decode(respJson)) {
-                | Error(key) => reject(BadResponse(respJson, key))
+                | Belt.Result.Error(key) => reject(BadResponse(respJson, key))
                 | Ok(v) => resolve(v)
             }
         );
@@ -58,7 +57,7 @@ module Make = (Config: Config) => {
         ])
         |> then_((respJson) =>
             switch (Search.t_decode(respJson)) {
-                | Error(key) => reject(BadResponse(respJson, key))
+                | Belt.Result.Error(key) => reject(BadResponse(respJson, key))
                 | Ok(v) => resolve(v)
             }
         );
