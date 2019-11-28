@@ -29,7 +29,7 @@
     "bs-platform": "^6.0.1"
   },
   "dependencies": {
-    "@ryb73/bs-superagent": "^0.4.0-bs6.1",
+    "@ryb73/bs-superagent": "^0.4.0",
     "@ryb73/opt-ex": "^0.3.1",
     "@ryb73/prom-ex": "^1.0.1",
     "decco": "^1.0.0"
